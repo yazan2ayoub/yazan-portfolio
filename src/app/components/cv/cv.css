@@ -1,0 +1,154 @@
+/* Core Layout Parameters */
+.cv-section {
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property for absolute cross-browser compatibility */
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* HIGH-CONTRAST TEXT VARIATIONS FOR DARK MODE */
+.text-cv-bright {
+  color: #f1f5f9 !important; /* Vivid metallic off-white for crucial data like dates/locations */
+  font-weight: 600;
+}
+
+.text-cv-muted {
+  color: #cbd5e1 !important; /* Highly readable silver-slate for paragraphs */
+}
+
+.text-cv-accent {
+  color: #94a3b8 !important; /* Mid-tone slate for auxiliary sub-labels */
+}
+
+/* Abstract Container Styling */
+.abstract-box {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 576px) {
+  .abstract-box {
+    text-align: left;
+    font-size: 0.95rem;
+    padding: 1.25rem;
+  }
+}
+
+/* Premium Card Architecture */
+.cv-card {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
+}
+
+/* Glowing States On Scroll Hover */
+.cv-card.blue-glow:hover { border-color: rgba(96, 165, 250, 0.7); box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15); transform: translateY(-4px); }
+.cv-card.green-glow:hover { border-color: rgba(74, 222, 128, 0.7); box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15); transform: translateY(-4px); }
+.cv-card.purple-glow:hover { border-color: rgba(192, 132, 252, 0.7); box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15); transform: translateY(-4px); }
+.cv-card.orange-glow:hover { border-color: rgba(251, 146, 60, 0.7); box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15); transform: translateY(-4px); }
+.cv-card.red-glow:hover { border-color: rgba(248, 113, 113, 0.7); box-shadow: 0 20px 40px rgba(239, 68, 68, 0.15); transform: translateY(-4px); }
+.cv-card.teal-glow:hover { border-color: rgba(45, 212, 191, 0.7); box-shadow: 0 20px 40px rgba(45, 212, 191, 0.15); transform: translateY(-4px); }
+
+/* Compact Categorization Badges */
+.custom-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  border: 1px solid transparent;
+}
+.badge-blue { background: rgba(59, 130, 246, 0.25); color: #eff6ff; border-color: rgba(59, 130, 246, 0.4); }
+.badge-green { background: rgba(34, 197, 94, 0.25); color: #f0fdf4; border-color: rgba(34, 197, 94, 0.4); }
+.badge-purple { background: rgba(168, 85, 247, 0.25); color: #faf5ff; border-color: rgba(168, 85, 247, 0.4); }
+.badge-orange { background: rgba(249, 115, 22, 0.25); color: #fff7ed; border-color: rgba(249, 115, 22, 0.4); }
+.badge-red { background: rgba(239, 68, 68, 0.25); color: #fef2f2; border-color: rgba(239, 68, 68, 0.4); }
+.badge-teal { background: rgba(20, 184, 166, 0.25); color: #f0fdfa; border-color: rgba(20, 184, 166, 0.4); }
+
+/* Rigid Constraint Matrix for the Download Component */
+.download-btn-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.premium-download-btn {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.premium-download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.45);
+  color: #ffffff !important;
+}
+
+.rigid-icon {
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  flex-shrink: 0 !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Bulletpoint Rules */
+.cv-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.cv-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.65rem;
+  color: #f8fafc; /* Crystal-clear bright white text for maximum readability */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cv-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+.list-blue li::before { color: #60a5fa; }
+.list-green li::before { color: #4ade80; }
+.list-purple li::before { color: #c084fc; }
+.list-orange li::before { color: #fb923c; }
+.list-red li::before { color: #f87171; }
+.list-teal li::before { color: #2dd4bf; }

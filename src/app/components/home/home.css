@@ -1,0 +1,67 @@
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Bulletproof Button Upward Hover Effect */
+.portfolio-btn {
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease !important;
+  will-change: transform;
+}
+
+.portfolio-btn:hover {
+  transform: translateY(-6px) !important; /* Forces layout translation upward */
+  box-shadow: 0 12px 25px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Three Times Larger Card Stack Infrastructure */
+.stack-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  height: 900px; /* Safe height for mobile screens */
+  margin: 0 auto;
+}
+
+/* Upscale height only for tablets and desktop viewports */
+@media (min-width: 768px) {
+  .stack-wrapper {
+    height: 750px;
+  }
+}
+
+.large-stack-card {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease, z-index 0.6s ease;
+  will-change: transform, opacity;
+}
+
+/* Card glow effect */
+.card-glow {
+  position: relative;
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3));
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card-glow.active::before {
+  opacity: 1;
+}

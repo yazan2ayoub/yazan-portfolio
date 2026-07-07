@@ -1,0 +1,247 @@
+.portfolio-section {
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-cv-bright {
+  color: #f1f5f9 !important;
+  font-weight: 600;
+}
+
+.text-cv-muted {
+  color: #cbd5e1 !important;
+}
+
+.text-cv-accent {
+  color: #94a3b8 !important;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-pill-btn {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filter-pill-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(30, 41, 59, 0.8);
+  transform: translateY(-2px);
+}
+
+.filter-pill-btn.active {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.cv-card {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease !important;
+}
+
+.cv-card.blue-glow:hover { border-color: rgba(96, 165, 250, 0.7); box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15); transform: translateY(-6px) !important; }
+.cv-card.purple-glow:hover { border-color: rgba(192, 132, 252, 0.7); box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15); transform: translateY(-6px) !important; }
+.cv-card.orange-glow:hover { border-color: rgba(251, 146, 60, 0.7); box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15); transform: translateY(-6px) !important; }
+.cv-card.teal-glow:hover { border-color: rgba(45, 212, 191, 0.7); box-shadow: 0 20px 40px rgba(45, 212, 191, 0.15); transform: translateY(-6px) !important; }
+.cv-card.green-glow:hover { border-color: rgba(74, 222, 128, 0.7); box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15); transform: translateY(-6px) !important; }
+.cv-card.red-glow:hover { border-color: rgba(248, 113, 113, 0.7); box-shadow: 0 20px 40px rgba(239, 68, 68, 0.15); transform: translateY(-6px) !important; }
+
+.project-media-frame {
+  height: 180px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-matte-blur {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08), transparent);
+  z-index: 1;
+}
+
+.media-fallback-icon {
+  font-size: 2.5rem;
+  opacity: 0.25;
+  z-index: 2;
+  filter: grayscale(30%);
+}
+
+.custom-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  z-index: 5;
+}
+.badge-blue { background: rgba(59, 130, 246, 0.25); color: #eff6ff; border-color: rgba(59, 130, 246, 0.4); }
+.badge-purple { background: rgba(168, 85, 247, 0.25); color: #faf5ff; border-color: rgba(168, 85, 247, 0.4); }
+.badge-orange { background: rgba(249, 115, 22, 0.25); color: #fff7ed; border-color: rgba(249, 115, 22, 0.4); }
+.badge-teal { background: rgba(20, 184, 166, 0.25); color: #f0fdfa; border-color: rgba(20, 184, 166, 0.4); }
+.badge-green { background: rgba(34, 197, 94, 0.25); color: #f0fdf4; border-color: rgba(34, 197, 94, 0.4); }
+.badge-red { background: rgba(239, 68, 68, 0.25); color: #fef2f2; border-color: rgba(239, 68, 68, 0.4); }
+
+.project-feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.project-feature-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.45rem;
+  color: #cbd5e1;
+  font-size: 0.825rem;
+  line-height: 1.4;
+}
+
+.project-feature-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+.blue-glow .project-feature-list li::before { color: #60a5fa; }
+.teal-glow .project-feature-list li::before { color: #2dd4bf; }
+.green-glow .project-feature-list li::before { color: #4ade80; }
+.purple-glow .project-feature-list li::before { color: #c084fc; }
+.orange-glow .project-feature-list li::before { color: #fb923c; }
+.red-glow .project-feature-list li::before { color: #f87171; }
+
+.tech-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #94a3b8;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.project-action-link {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-action-link:hover {
+  color: #a78bfa;
+}
+
+.rigid-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.object-cover {
+  object-fit: cover !important;
+  object-position: center !important;
+  z-index: 1;
+}
+
+.media-fallback-container {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  position: relative;
+}
+
+.top-3 { top: 1rem !important; }
+.start-3 { left: 1rem !important; }
+.gap-1\.5 { gap: 0.375rem !important; }
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   PREMIUM CINEMATIC VIEW TRANSITION ARCHITECTURE (SLOW & SLICK FILTERING)
+   ========================================================================== */
+
+/* 1. Control the layout cards that are MOVING across columns */
+::view-transition-group(*) {
+  animation-duration: 0.85s !important; /* Stretched timeline for premium impact */
+  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1) !important; /* Luxury cinematic ease-in-out curve */
+}
+
+/* 2. Control cards that are LEAVING / DISAPPEARING */
+::view-transition-old(root) {
+  animation: cinematicFadeOut 0.3s cubic-bezier(0.3, 0, 0.2, 1) both !important;
+}
+
+/* 3. Control cards that are ENTERING / ARRIVING */
+::view-transition-new(root) {
+  animation: cinematicGlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both !important;
+  animation-delay: 0.18s !important; /* Staggered arrival lets old items clear first, avoiding crowded look */
+}
+
+@keyframes cinematicFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.92);
+    filter: blur(6px);
+  }
+}
+
+@keyframes cinematicGlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.95);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}

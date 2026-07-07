@@ -1,0 +1,92 @@
+<section class="portfolio-section pt-5 pb-5">
+  <div class="container" style="max-width: 1140px; padding-top: 5rem;">
+    
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h1 class="display-5 fw-extrabold text-white mb-3">
+        My <span class="gradient-text">Portfolio</span>
+      </h1>
+      <p class="text-cv-muted mx-auto mb-4" style="max-width: 600px; font-size: 1.1rem;">
+        An engineering catalog tracing industrial project contributions, full-stack web architectures, and automated layout configurations.
+      </p>
+    </div>
+
+    <!-- Filter Control Board -->
+    <div class="filter-wrapper d-flex flex-wrap gap-2 justify-center mb-5" data-aos="fade-up" data-aos-delay="100">
+      <button (click)="setFilter('All')" [class.active]="activeFilter() === 'All'" class="filter-pill-btn">All Systems</button>
+      <button (click)="setFilter('Game Development')" [class.active]="activeFilter() === 'Game Development'" class="filter-pill-btn">Interactive Games</button>
+      <button (click)="setFilter('Engineering Tools')" [class.active]="activeFilter() === 'Engineering Tools'" class="filter-pill-btn">Automation Tools</button>
+      <button (click)="setFilter('Web Development')" [class.active]="activeFilter() === 'Web Development'" class="filter-pill-btn">Web Applications</button>
+      <button (click)="setFilter('Civil Engineering')" [class.active]="activeFilter() === 'Civil Engineering'" class="filter-pill-btn">Civil Engineering</button>
+    </div>
+
+    <!-- Responsive Project Grid Grid -->
+    <div class="row g-4 justify-content-center">
+      @for (project of filteredProjects(); track project.title) {
+        <div class="col-md-6 col-lg-4 d-flex" 
+             data-aos="fade-up"
+             [style.view-transition-name]="getTransitionName(project.title)">
+          <div class="cv-card w-100 d-flex flex-column justify-content-between p-0 overflow-hidden" [ngClass]="project.glowClass">
+            
+            <div class="project-media-frame position-relative flex-shrink-0">
+              <img 
+                [src]="project.image" 
+                [alt]="project.title" 
+                class="w-100 h-100 object-cover position-absolute top-0 start-0"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              >
+              <div class="media-fallback-container w-100 h-100 d-none flex-column align-items-center justify-content-center text-center p-3">
+                <div class="media-matte-blur"></div>
+                <div class="media-fallback-icon"></div>
+              </div>
+              <span class="custom-badge position-absolute top-3 start-3" [ngClass]="project.badgeClass">
+                {{ project.category }}
+              </span>
+            </div>
+
+            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h5 text-white font-bold mb-2">{{ project.title }}</h3>
+                <p class="text-cv-muted small mb-3" [ngClass]="{'line-clamp': !project.features}">
+                  {{ project.description }}
+                </p>
+
+                @if (project.features) {
+                  <ul class="project-feature-list mb-4">
+                    @for (feature of project.features; track feature) {
+                      <li>{{ feature }}</li>
+                    }
+                  </ul>
+                }
+              </div>
+
+              <div>
+                <div class="tech-tag-cloud d-flex flex-wrap gap-1.5 mb-3">
+                  @for (tech of project.technologies; track tech) {
+                    <span class="tech-badge">{{ tech }}</span>
+                  }
+                </div>
+
+                <div class="pt-2 border-top border-secondary/20">
+                  @if (!project.isProprietary) {
+                    <a [href]="project.link" target="_blank" class="project-action-link d-inline-flex align-items-center gap-1.5 small fw-bold">
+                      View Repository
+                      <svg class="rigid-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                      </svg>
+                    </a>
+                  } @else {
+                    <span class="text-cv-accent small font-monospace d-flex align-items-center gap-1">
+                      🔒 Proprietary Industrial Asset
+                    </span>
+                  }
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,89 @@
+<nav class="navbar navbar-expand-lg fixed-top shadow-lg" style="background: #0f172a; border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <div class="container" style="max-width: 1200px;">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold" routerLink="/" style="font-size: 1.4rem;">
+      <span style="background: linear-gradient(135deg, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Yazan</span>
+      <span style="background: linear-gradient(135deg, #8b5cf6, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Ayoub</span>
+    </a>
+
+    <!-- Toggler -->
+    <button 
+      class="navbar-toggler border-0" 
+      type="button" 
+      (click)="isMenuOpen = !isMenuOpen"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation"
+      style="color: white;"
+    >
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div 
+      class="collapse navbar-collapse" 
+      [class.mobile-menu-active]="isMenuOpen"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            routerLink="/" 
+            routerLinkActive="active" 
+            [routerLinkActiveOptions]="{ exact: true }" 
+            (click)="isMenuOpen = false"
+            style="color: rgba(255,255,255,0.7) !important; font-weight: 500; padding: 0.5rem 1.2rem; border-radius: 8px; transition: all 0.3s ease;"
+          >
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            routerLink="/cv" 
+            routerLinkActive="active" 
+            (click)="isMenuOpen = false"
+            style="color: rgba(255,255,255,0.7) !important; font-weight: 500; padding: 0.5rem 1.2rem; border-radius: 8px; transition: all 0.3s ease;"
+          >
+            CV
+          </a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            routerLink="/portfolio" 
+            routerLinkActive="active" 
+            (click)="isMenuOpen = false"
+            style="color: rgba(255,255,255,0.7) !important; font-weight: 500; padding: 0.5rem 1.2rem; border-radius: 8px; transition: all 0.3s ease;"
+          >
+            Portfolio
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a 
+            class="nav-link dropdown-toggle" 
+            href="#" 
+            role="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false"
+            style="color: rgba(255,255,255,0.7) !important; font-weight: 500; padding: 0.5rem 1.2rem; border-radius: 8px; transition: all 0.3s ease;"
+          >
+            More
+          </a>
+          <ul class="dropdown-menu" style="background: #1e293b; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 0.5rem; margin-top: 0.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+            <li><a class="dropdown-item" href="/assets/yazan-ayoub-cv.pdf" target="_blank" style="color: rgba(255,255,255,0.8); border-radius: 8px; padding: 0.5rem 1rem; transition: all 0.2s ease;">📄 Download CV</a></li>
+            <li><a class="dropdown-item" href="https://www.linkedin.com/in/yazan-ayoub-772541128" target="_blank" style="color: rgba(255,255,255,0.8); border-radius: 8px; padding: 0.5rem 1rem; transition: all 0.2s ease;">🔗 LinkedIn</a></li>
+            <li><hr class="dropdown-divider" style="border-color: rgba(255,255,255,0.06);"></li>
+            <li><a class="dropdown-item" href="mailto:yazan_ayoub@hotmail.com" style="color: rgba(255,255,255,0.8); border-radius: 8px; padding: 0.5rem 1rem; transition: all 0.2s ease;">✉️ Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="d-flex">
+        <a href="mailto:yazan_ayoub@hotmail.com" class="btn rounded-pill px-4" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; border: none; transition: all 0.3s ease; font-weight: 500;">
+          ✉️ Contact
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
