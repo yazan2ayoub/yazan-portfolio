@@ -30,7 +30,7 @@ export class PortfolioComponent implements AfterViewInit {
     {
       title: 'LEARNOPOLY - Interactive Educational Platform',
       category: 'Game Development',
-      description: 'An advanced interactive gamified platform engineered in Unity to transform classroom curriculum delivery through explicit turn-based gameplay, state evaluation tracking, and real-time student performance feedback loop mechanics.',
+      description: 'An advanced interactive gamified platform engineered in Unity to transform classroom curriculum delivery through explicit turn-based gameplay, state evaluation tracking, and real-time student performance feedback loop mechanics. The winner of Dewaan Al Taaleem award',
       features: [
         'Dynamic Question Administration: Provides full master control parameters for instructors to create, modify, or partition question banks by targeted units, grade sets, and Depth of Knowledge (DOK) metrics.',
         'Multi-Player Turn Matrix: Built-in logical tracking loop supporting up to 7 collaborative student teams in synchronized turn-based gameplay.',
