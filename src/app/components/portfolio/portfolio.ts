@@ -43,70 +43,28 @@ export class PortfolioComponent implements AfterViewInit {
       link: 'https://example.com/game',
       glowClass: 'purple-glow',
       badgeClass: 'badge-purple',
-      isProprietary: false
+      isProprietary: true
     },
     {
-      title: 'Delivery Dash - Logistics Simulation',
-      category: 'Game Development',
-      description: 'A top-down 2D driving and neighborhood package distribution arcade game exploring material pickup mechanics, inertia matrices, and dynamic terrain interaction filters.',
-      features: [
-        'Package Distribution Loop: Scripted rigid trigger volumes managing multi-stage package collections and customer delivery drop zone states.',
-        'Obstacle Momentum Degradation: Implemented full structural 2D rigidbodies on residential houses and fencing assets to dynamically degrade vehicle speed upon collision.',
-        'Dynamic Mud Friction Dampening: Configured layered coordinate queries that instantly scale down vehicle max velocity profiles whenever crossing mud-patch terrain markers.'
-      ],
-      image: 'assets/images/1.png',
-      technologies: ['C# Scripting', 'Unity 2D Physics', 'Trigger Matrices', 'Velocity Filtering'],
-      link: '',
-      glowClass: 'purple-glow',
-      badgeClass: 'badge-purple',
-      isProprietary: false
+        title: 'Dynamic Angular Portfolio Platform',
+        category: 'Web Development',
+        description: 'Architected and implemented this modular, highly scalable single-page responsive portfolio application entirely from scratch to showcase engineering solutions and automated software architectures.',
+        features: [
+          'Reactive State Filtering: Leveraging efficient data tracking loop systems to execute instantaneous, flicker-free project filtering without page reloads.',
+          'Premium Glassmorphic Design: Fully customized advanced CSS design engine layered with backdrop-blur filters, giving complete thematic continuity with your CV.',
+          'Optimized Component Architecture: Built entirely using modern standalone Angular structures, eliminating unnecessary module bloat for hyper-fast initial load speeds.',
+          'Aesthetic Lighting Engines: Custom hover-physics matrix mapped to coordinate six distinct drop-shadow neon glows and micro-translations.',
+          'Robust Image Fallback Loop: Bulletproof error-handling interceptors (`onerror`) that smoothly swap broken or missing image paths into clean, structural placeholder graphics.',
+          'Entrance Coordination: Native lifecycle synchronization that refreshes Animate On Scroll (AOS) libraries accurately, tracking layout boundaries during sorting changes.'
+        ],
+        image: 'assets/AngularPortfolio/1.png',
+        technologies: ['Angular 18', 'Bootstrap Layouts', 'Advanced CSS', 'TypeScript'],
+        link: 'https://github.com/your-username/yazan-portfolio',
+        glowClass: 'teal-glow',
+        badgeClass: 'badge-teal',
+        isProprietary: false
     },
-    {
-      title: 'Snow Surfer - Physics-Based Trick Engine',
-      category: 'Game Development',
-      description: 'A side-scrolling physics simulation built around mid-air angular momentum, rotation multipliers, and stringent ground landing safety thresholds.',
-      features: [
-        'Airborne Rotation Scoring: Created a specialized score tracker running real-time calculations to award points based on completed forward or backward 360-degree flips.',
-        'Arrow-Key Input Optimization: Fully synchronized horizontal and vertical button inputs directly with the main player rigidbody to manipulate angular torque mid-air.'
-      ],
-      image: 'assets/images/2.png',
-      technologies: ['C# Engine Code', 'Angular Momentum', 'Fail-State Triggers', 'UI Selection'],
-      link: '',
-      glowClass: 'purple-glow',
-      badgeClass: 'badge-purple',
-      isProprietary: false
-    },
-    {
-      title: 'Tilevenia - Modular 2D Platformer',
-      category: 'Game Development',
-      description: 'A classic 2D retro action platformer starring "Bronzo," featuring fully integrated sprite animation controllers, localized audio triggers, and highly scalable grid palettes.',
-      features: [
-        'Master Grid Tilemaps: Architected maps using uniform Unity Tilemap grids with pre-programmed collision parameters for rapid environment layout building.',
-        'Ranged Action Combat: Coded an instantaneous projectile instantiation script letting Bronzo shoot down attacking environmental enemy entities.'
-      ],
-      image: 'assets/images/3.png',
-      technologies: ['Unity Tilemaps', 'Animation States', 'HUD Tracking', 'Modular Architecture'],
-      link: '',
-      glowClass: 'purple-glow',
-      badgeClass: 'badge-purple',
-      isProprietary: false
-    },
-    {
-      title: 'Starblast - Arcade Space Shooter',
-      category: 'Game Development',
-      description: 'An endless vertical space-shooter application featuring procedural enemy wave spawning arrays, scaling structural difficulty, and full asset destruction tracking.',
-      features: [
-        'Parallax Space Backdrops: Multi-layered background canvases moving proportionally to spaceship velocity to create immersive interstellar depth.',
-        'Procedural Spawning Waves: Programmed an infinite spawn controller loop that incrementally scales difficulty parameters, enemy quantities, and fire-rates per consecutive wave.'
-      ],
-      image: 'assets/images/4.png',
-      technologies: ['Procedural Loops', 'Parallax Scrolling', 'State Destruction', 'Array Spawners'],
-      link: '',
-      glowClass: 'purple-glow',
-      badgeClass: 'badge-purple',
-      isProprietary: false
-    },
-    {
+        {
           title: 'Autodesk Workflow Automation Suite',
           category: 'Engineering Tools',
           description: 'An advanced C# .NET desktop ribbon extension engineered for Autodesk Revit to eliminate core design bottlenecks, optimize manual documentation loops, and handle multi-layer drawing extractions.',
@@ -125,27 +83,71 @@ export class PortfolioComponent implements AfterViewInit {
           link: '',
           glowClass: 'blue-glow',
           badgeClass: 'badge-blue',
-          isProprietary: false
+          isProprietary: true
         },
-        {
-        title: 'Dynamic Angular Portfolio Platform',
-        category: 'Web Development',
-        description: 'Architected and implemented this modular, highly scalable single-page responsive portfolio application entirely from scratch to showcase engineering solutions and automated software architectures.',
-        features: [
-          'Reactive State Filtering: Leveraging efficient data tracking loop systems to execute instantaneous, flicker-free project filtering without page reloads.',
-          'Premium Glassmorphic Design: Fully customized advanced CSS design engine layered with backdrop-blur filters, giving complete thematic continuity with your CV.',
-          'Optimized Component Architecture: Built entirely using modern standalone Angular structures, eliminating unnecessary module bloat for hyper-fast initial load speeds.',
-          'Aesthetic Lighting Engines: Custom hover-physics matrix mapped to coordinate six distinct drop-shadow neon glows and micro-translations.',
-          'Robust Image Fallback Loop: Bulletproof error-handling interceptors (`onerror`) that smoothly swap broken or missing image paths into clean, structural placeholder graphics.',
-          'Entrance Coordination: Native lifecycle synchronization that refreshes Animate On Scroll (AOS) libraries accurately, tracking layout boundaries during sorting changes.'
-        ],
-        image: 'assets/AngularPortfolio/1.png',
-        technologies: ['Angular 18', 'Bootstrap Layouts', 'Advanced CSS', 'TypeScript'],
-        link: 'https://github.com/your-username/yazan-portfolio',
-        glowClass: 'teal-glow',
-        badgeClass: 'badge-teal',
-        isProprietary: false
-      },
+
+    {
+      title: 'Delivery Dash - Logistics Simulation',
+      category: 'Game Development',
+      description: 'A top-down 2D driving and neighborhood package distribution arcade game exploring material pickup mechanics, inertia matrices, and dynamic terrain interaction filters.',
+      features: [
+        'Package Distribution Loop: Scripted rigid trigger volumes managing multi-stage package collections and customer delivery drop zone states.',
+        'Obstacle Momentum Degradation: Implemented full structural 2D rigidbodies on residential houses and fencing assets to dynamically degrade vehicle speed upon collision.',
+        'Dynamic Mud Friction Dampening: Configured layered coordinate queries that instantly scale down vehicle max velocity profiles whenever crossing mud-patch terrain markers.'
+      ],
+      image: 'assets/images/1.png',
+      technologies: ['C# Scripting', 'Unity 2D Physics', 'Trigger Matrices', 'Velocity Filtering'],
+      link: 'https://github.com/yazan2ayoub/delivery-dash',
+      glowClass: 'purple-glow',
+      badgeClass: 'badge-purple',
+      isProprietary: false
+    },
+    {
+      title: 'Snow Surfer - Physics-Based Trick Engine',
+      category: 'Game Development',
+      description: 'A side-scrolling physics simulation built around mid-air angular momentum, rotation multipliers, and stringent ground landing safety thresholds.',
+      features: [
+        'Airborne Rotation Scoring: Created a specialized score tracker running real-time calculations to award points based on completed forward or backward 360-degree flips.',
+        'Arrow-Key Input Optimization: Fully synchronized horizontal and vertical button inputs directly with the main player rigidbody to manipulate angular torque mid-air.'
+      ],
+      image: 'assets/images/2.png',
+      technologies: ['C# Engine Code', 'Angular Momentum', 'Fail-State Triggers', 'UI Selection'],
+      link: 'https://github.com/yazan2ayoub/Snow-Surfer---Physics-Based-Trick-Engine',
+      glowClass: 'purple-glow',
+      badgeClass: 'badge-purple',
+      isProprietary: false
+    },
+    {
+      title: 'Tilevenia - Modular 2D Platformer',
+      category: 'Game Development',
+      description: 'A classic 2D retro action platformer starring "Bronzo," featuring fully integrated sprite animation controllers, localized audio triggers, and highly scalable grid palettes.',
+      features: [
+        'Master Grid Tilemaps: Architected maps using uniform Unity Tilemap grids with pre-programmed collision parameters for rapid environment layout building.',
+        'Ranged Action Combat: Coded an instantaneous projectile instantiation script letting Bronzo shoot down attacking environmental enemy entities.'
+      ],
+      image: 'assets/images/3.png',
+      technologies: ['Unity Tilemaps', 'Animation States', 'HUD Tracking', 'Modular Architecture'],
+      link: 'https://github.com/yazan2ayoub/Tilevenia---Modular-2D-Platformer',
+      glowClass: 'purple-glow',
+      badgeClass: 'badge-purple',
+      isProprietary: false
+    },
+    {
+      title: 'Starblast - Arcade Space Shooter',
+      category: 'Game Development',
+      description: 'An endless vertical space-shooter application featuring procedural enemy wave spawning arrays, scaling structural difficulty, and full asset destruction tracking.',
+      features: [
+        'Parallax Space Backdrops: Multi-layered background canvases moving proportionally to spaceship velocity to create immersive interstellar depth.',
+        'Procedural Spawning Waves: Programmed an infinite spawn controller loop that incrementally scales difficulty parameters, enemy quantities, and fire-rates per consecutive wave.'
+      ],
+      image: 'assets/images/4.png',
+      technologies: ['Procedural Loops', 'Parallax Scrolling', 'State Destruction', 'Array Spawners'],
+      link: 'https://github.com/yazan2ayoub/Starblast---Arcade-Space-Shooter',
+      glowClass: 'purple-glow',
+      badgeClass: 'badge-purple',
+      isProprietary: false
+    },
+
       {
         title: 'NFS Project',
         category: 'Civil Engineering',
