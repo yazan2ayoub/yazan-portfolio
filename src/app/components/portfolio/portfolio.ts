@@ -59,7 +59,7 @@ export class PortfolioComponent implements AfterViewInit {
         ],
         image: 'assets/AngularPortfolio/1.png',
         technologies: ['Angular 18', 'Bootstrap Layouts', 'Advanced CSS', 'TypeScript'],
-        link: 'https://github.com/your-username/yazan-portfolio',
+        link: 'https://github.com/yazan2ayoub/yazan-portfolio.git',
         glowClass: 'teal-glow',
         badgeClass: 'badge-teal',
         isProprietary: false
