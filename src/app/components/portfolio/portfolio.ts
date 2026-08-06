@@ -42,10 +42,10 @@ export class PortfolioComponent implements AfterViewInit {
       link: 'https://github.com/yazan2ayoub/two-percent-fitness',
       glowClass: 'teal-glow',
       badgeClass: 'badge-teal',
-      isProprietary: false
+      isProprietary: true
     },
     {
-      title: 'RivIT — Automated BIM Compliance Inspector',
+      title: 'Rivit — Automated BIM Compliance Inspector',
       category: 'Engineering Tools',
       description: 'A complex Autodesk Revit assessment engine engineered to automatically parse BIM models, detect architectural and structural non-compliances against targeted standards, and generate automated audit reports.',
       features: [
@@ -54,7 +54,7 @@ export class PortfolioComponent implements AfterViewInit {
         'Deep Revit API Integration: Custom C#/.NET ribbon commands interfacing directly with the Revit internal database to query hidden properties and spatial relationships.',
         'Quality Assurance Optimization: Eliminates manual model auditing, drastically accelerating BIM submission timelines and client compliance handovers.'
       ],
-      image: 'assets/RivIT/1.png',
+      image: 'assets/Rivit/1.jpg',
       technologies: ['C#/.NET', 'Revit API', 'BIM Standards', 'Automated Auditing'],
       link: '',
       glowClass: 'blue-glow',
