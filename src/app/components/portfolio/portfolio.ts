@@ -45,7 +45,7 @@ export class PortfolioComponent implements AfterViewInit {
       isProprietary: true
     },
     {
-      title: 'Rivit — Automated BIM Compliance Inspector',
+      title: 'Revit — Automated BIM Compliance Inspector',
       category: 'Engineering Tools',
       description: 'A complex Autodesk Revit assessment engine engineered to automatically parse BIM models, detect architectural and structural non-compliances against targeted standards, and generate automated audit reports.',
       features: [
@@ -54,7 +54,7 @@ export class PortfolioComponent implements AfterViewInit {
         'Deep Revit API Integration: Custom C#/.NET ribbon commands interfacing directly with the Revit internal database to query hidden properties and spatial relationships.',
         'Quality Assurance Optimization: Eliminates manual model auditing, drastically accelerating BIM submission timelines and client compliance handovers.'
       ],
-      image: 'assets/Rivit/1.jpg',
+      image: 'assets/Revit/1.jpg',
       technologies: ['C#/.NET', 'Revit API', 'BIM Standards', 'Automated Auditing'],
       link: '',
       glowClass: 'blue-glow',
