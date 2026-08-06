@@ -28,6 +28,40 @@ export class PortfolioComponent implements AfterViewInit {
 
   projects: Project[] = [
     {
+      title: '2% Fitness Jordan — Elite Boutique Gym Platform',
+      category: 'Web Development',
+      description: 'Architected and engineered a high-intensity luxury boutique gym web application built with Angular 21, featuring custom Tailwind v4 glassmorphism tokens, Lenis smooth scrolling, rectangular card layouts, and responsive media containers.',
+      features: [
+        'Modern Angular 21 Stack: Built using standalone component architecture, Signal-driven reactive state, and performance-optimized syntax.',
+        'Tailwind CSS v4 Styling Engine: Designed custom high-contrast dark tokens (#090A0C), glassmorphic surfaces (.boutique-glass), and rectangular card systems (.boutique-rect-card).',
+        'Lenis Smooth Scroll Engine: Integrated smooth scrolling lifecycle synchronized across structural studio zones and pricing containers.',
+        'High-Impact Hero & Dual CTAs: Features full-screen autoplay background video overlays with direct WhatsApp reservation routes and membership packages.'
+      ],
+      image: 'assets/2percentFitness/1.png',
+      technologies: ['Angular 21', 'Tailwind CSS v4', 'Lenis Scroll', 'PostCSS', 'TypeScript'],
+      link: 'https://github.com/yazan2ayoub/two-percent-fitness',
+      glowClass: 'teal-glow',
+      badgeClass: 'badge-teal',
+      isProprietary: false
+    },
+    {
+      title: 'RivIT — Automated BIM Compliance Inspector',
+      category: 'Engineering Tools',
+      description: 'A complex Autodesk Revit assessment engine engineered to automatically parse BIM models, detect architectural and structural non-compliances against targeted standards, and generate automated audit reports.',
+      features: [
+        'Automated Rule Inspection Engine: Programmatically evaluates complex Revit model geometry, element parameters, and structural families against strict compliance rule sets.',
+        'Instant Non-Compliance Reporting: Automated detection pipeline isolating structural discrepancies, missing parameters, and modeling errors across active workspaces.',
+        'Deep Revit API Integration: Custom C#/.NET ribbon commands interfacing directly with the Revit internal database to query hidden properties and spatial relationships.',
+        'Quality Assurance Optimization: Eliminates manual model auditing, drastically accelerating BIM submission timelines and client compliance handovers.'
+      ],
+      image: 'assets/RivIT/1.png',
+      technologies: ['C#/.NET', 'Revit API', 'BIM Standards', 'Automated Auditing'],
+      link: '',
+      glowClass: 'blue-glow',
+      badgeClass: 'badge-blue',
+      isProprietary: true
+    },
+    {
       title: 'LEARNOPOLY - Interactive Educational Platform',
       category: 'Game Development',
       description: 'An advanced interactive gamified platform engineered in Unity to transform classroom curriculum delivery through explicit turn-based gameplay, state evaluation tracking, and real-time student performance feedback loop mechanics. The winner of Dewaan Al Taaleem award',
@@ -46,46 +80,45 @@ export class PortfolioComponent implements AfterViewInit {
       isProprietary: true
     },
     {
-        title: 'Dynamic Angular Portfolio Platform',
-        category: 'Web Development',
-        description: 'Architected and implemented this modular, highly scalable single-page responsive portfolio application entirely from scratch to showcase engineering solutions and automated software architectures.',
-        features: [
-          'Reactive State Filtering: Leveraging efficient data tracking loop systems to execute instantaneous, flicker-free project filtering without page reloads.',
-          'Premium Glassmorphic Design: Fully customized advanced CSS design engine layered with backdrop-blur filters, giving complete thematic continuity with your CV.',
-          'Optimized Component Architecture: Built entirely using modern standalone Angular structures, eliminating unnecessary module bloat for hyper-fast initial load speeds.',
-          'Aesthetic Lighting Engines: Custom hover-physics matrix mapped to coordinate six distinct drop-shadow neon glows and micro-translations.',
-          'Robust Image Fallback Loop: Bulletproof error-handling interceptors (`onerror`) that smoothly swap broken or missing image paths into clean, structural placeholder graphics.',
-          'Entrance Coordination: Native lifecycle synchronization that refreshes Animate On Scroll (AOS) libraries accurately, tracking layout boundaries during sorting changes.'
-        ],
-        image: 'assets/AngularPortfolio/1.png',
-        technologies: ['Angular 18', 'Bootstrap Layouts', 'Advanced CSS', 'TypeScript'],
-        link: 'https://github.com/yazan2ayoub/yazan-portfolio.git',
-        glowClass: 'teal-glow',
-        badgeClass: 'badge-teal',
-        isProprietary: false
+      title: 'Dynamic Angular Portfolio Platform',
+      category: 'Web Development',
+      description: 'Architected and implemented this modular, highly scalable single-page responsive portfolio application entirely from scratch to showcase engineering solutions and automated software architectures.',
+      features: [
+        'Reactive State Filtering: Leveraging efficient data tracking loop systems to execute instantaneous, flicker-free project filtering without page reloads.',
+        'Premium Glassmorphic Design: Fully customized advanced CSS design engine layered with backdrop-blur filters, giving complete thematic continuity with your CV.',
+        'Optimized Component Architecture: Built entirely using modern standalone Angular structures, eliminating unnecessary module bloat for hyper-fast initial load speeds.',
+        'Aesthetic Lighting Engines: Custom hover-physics matrix mapped to coordinate six distinct drop-shadow neon glows and micro-translations.',
+        'Robust Image Fallback Loop: Bulletproof error-handling interceptors (`onerror`) that smoothly swap broken or missing image paths into clean, structural placeholder graphics.',
+        'Entrance Coordination: Native lifecycle synchronization that refreshes Animate On Scroll (AOS) libraries accurately, tracking layout boundaries during sorting changes.'
+      ],
+      image: 'assets/AngularPortfolio/1.png',
+      technologies: ['Angular 18', 'Bootstrap Layouts', 'Advanced CSS', 'TypeScript'],
+      link: 'https://github.com/yazan2ayoub/yazan-portfolio.git',
+      glowClass: 'teal-glow',
+      badgeClass: 'badge-teal',
+      isProprietary: false
     },
-        {
-          title: 'Autodesk Workflow Automation Suite',
-          category: 'Engineering Tools',
-          description: 'An advanced C# .NET desktop ribbon extension engineered for Autodesk Revit to eliminate core design bottlenecks, optimize manual documentation loops, and handle multi-layer drawing extractions.',
-          features: [
-            'Batch Document Exporting: Programmatic sheet translation to clear PDF formatting.',
-            'CAD Output Processing: Automated batch conversion of active structural sheets to DWG configurations.',
-            'Data-Driven Sheet Creation: Automated external initialization pipelines to generate Revit drawing sheets directly from Excel matrices.',
-            'Bulk Revision Controls: Programmatically mapping and synchronizing selected revision tags across target project sheets simultaneously.',
-            'Title Block Extraction Engines: Mass element filtering to instantly query and grab all structural title blocks on targeted drawing sheets.',
-            'Hidden Canvas Identification: Filtered selection scripts to instantly isolate and pick hidden workspace parameters.',
-            'Spatial Boundary Mapping: Specialized localized element queries to scan, isolate, and filter active room layers.',
-            'Automated Initialization Worksets: Instantly auto-generates structural workset layers directly from arrays of common standard naming strings.'
-          ],
-          image: 'assets/RevitAutomation/1.png',
-          technologies: ['C#/.NET', 'Revit API', 'Dynamo BIM', 'Data Extraction'],
-          link: '',
-          glowClass: 'blue-glow',
-          badgeClass: 'badge-blue',
-          isProprietary: true
-        },
-
+    {
+      title: 'Autodesk Workflow Automation Suite',
+      category: 'Engineering Tools',
+      description: 'An advanced C# .NET desktop ribbon extension engineered for Autodesk Revit to eliminate core design bottlenecks, optimize manual documentation loops, and handle multi-layer drawing extractions.',
+      features: [
+        'Batch Document Exporting: Programmatic sheet translation to clear PDF formatting.',
+        'CAD Output Processing: Automated batch conversion of active structural sheets to DWG configurations.',
+        'Data-Driven Sheet Creation: Automated external initialization pipelines to generate Revit drawing sheets directly from Excel matrices.',
+        'Bulk Revision Controls: Programmatically mapping and synchronizing selected revision tags across target project sheets simultaneously.',
+        'Title Block Extraction Engines: Mass element filtering to instantly query and grab all structural title blocks on targeted drawing sheets.',
+        'Hidden Canvas Identification: Filtered selection scripts to instantly isolate and pick hidden workspace parameters.',
+        'Spatial Boundary Mapping: Specialized localized element queries to scan, isolate, and filter active room layers.',
+        'Automated Initialization Worksets: Instantly auto-generates structural workset layers directly from arrays of common standard naming strings.'
+      ],
+      image: 'assets/RevitAutomation/1.png',
+      technologies: ['C#/.NET', 'Revit API', 'Dynamo BIM', 'Data Extraction'],
+      link: '',
+      glowClass: 'blue-glow',
+      badgeClass: 'badge-blue',
+      isProprietary: true
+    },
     {
       title: 'Delivery Dash - Logistics Simulation',
       category: 'Game Development',
@@ -147,28 +180,27 @@ export class PortfolioComponent implements AfterViewInit {
       badgeClass: 'badge-purple',
       isProprietary: false
     },
-
-      {
-        title: 'NFS Project',
-        category: 'Civil Engineering',
-        description: 'Executed cross-functional responsibilities across Site Engineering and Technical Engineering during the Design and Build phases of the Early Site Works to deliver comprehensive earthworks, road networks, and critical utility lines.',
-        features: [
-          'Value Engineering Pipeline Redesign: Proposed and engineered an alternative profile routing tracking the Future Ground Level (FGL), which averaged 1.5m above existing ground levels.',
-          'Subsurface Risk Mitigation: Elevating the routing embankment minimized complex structural utility crossings with pre-existing buried lines across the corridor.',
-          'Cost & Timeline Optimization: Drastically reduced hard rock excavation quantities and completely eliminated expensive trench dewatering setups, accelerating the pipe-laying critical path.',
-          'Fluid Dynamics Optimization: Modelled custom profile geometry to minimize pipeline up-and-down coordinates, successfully reducing potential air lock locations and lowering the required count of air release valves.',
-          'Technical Package Engineering: Developed a systematic approach to author and manage 140 custom Technical Packages containing detailed design drawings, job safety analyses (JSAs), and method statements to timely secure mandatory client work permits.',
-          'Data-Driven Progress Analytics: Launched localized color-coded tracker logs, progress bar charts, management dashboards, and rundown curves to actively monitor progress lifecycles and facilitate weekly interface coordination meetings with client stakeholders.',
-          'Earthwork Conversion: Re-engineered site logistics by processing raw surplus excavation material into certified structural Type-A fill directly via on-site crushing setups, completely eliminating the environmental and financial costs of external quarry imports for Lot-W8.',
-          'Resource Circularity & Site Safety: Designed a closed-loop system to collect and reuse dewatering discharge from underground tank excavations for site dust control to preserve fresh water, while adding a protective structural barricade ring around active high-capacity mobile crushers.'
-        ],
-        image: 'assets/NFS/1.png',
-        technologies: ['QE-LNG Standards', 'HDPE Pipelines', 'Site & Technical Eng.', 'Value Engineering'],
-        link: '',
-        glowClass: 'green-glow',
-        badgeClass: 'badge-green',
-        isProprietary: true
-      },
+    {
+      title: 'NFS Project',
+      category: 'Civil Engineering',
+      description: 'Executed cross-functional responsibilities across Site Engineering and Technical Engineering during the Design and Build phases of the Early Site Works to deliver comprehensive earthworks, road networks, and critical utility lines.',
+      features: [
+        'Value Engineering Pipeline Redesign: Proposed and engineered an alternative profile routing tracking the Future Ground Level (FGL), which averaged 1.5m above existing ground levels.',
+        'Subsurface Risk Mitigation: Elevating the routing embankment minimized complex structural utility crossings with pre-existing buried lines across the corridor.',
+        'Cost & Timeline Optimization: Drastically reduced hard rock excavation quantities and completely eliminated expensive trench dewatering setups, accelerating the pipe-laying critical path.',
+        'Fluid Dynamics Optimization: Modelled custom profile geometry to minimize pipeline up-and-down coordinates, successfully reducing potential air lock locations and lowering the required count of air release valves.',
+        'Technical Package Engineering: Developed a systematic approach to author and manage 140 custom Technical Packages containing detailed design drawings, job safety analyses (JSAs), and method statements to timely secure mandatory client work permits.',
+        'Data-Driven Progress Analytics: Launched localized color-coded tracker logs, progress bar charts, management dashboards, and rundown curves to actively monitor progress lifecycles and facilitate weekly interface coordination meetings with client stakeholders.',
+        'Earthwork Conversion: Re-engineered site logistics by processing raw surplus excavation material into certified structural Type-A fill directly via on-site crushing setups, completely eliminating the environmental and financial costs of external quarry imports for Lot-W8.',
+        'Resource Circularity & Site Safety: Designed a closed-loop system to collect and reuse dewatering discharge from underground tank excavations for site dust control to preserve fresh water, while adding a protective structural barricade ring around active high-capacity mobile crushers.'
+      ],
+      image: 'assets/NFS/1.png',
+      technologies: ['QE-LNG Standards', 'HDPE Pipelines', 'Site & Technical Eng.', 'Value Engineering'],
+      link: '',
+      glowClass: 'green-glow',
+      badgeClass: 'badge-green',
+      isProprietary: true
+    },
     {
       title: 'West Bay North parks & Roads',
       category: 'Civil Engineering',
