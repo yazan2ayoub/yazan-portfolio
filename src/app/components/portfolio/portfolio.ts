@@ -37,7 +37,7 @@ export class PortfolioComponent implements AfterViewInit {
         'Lenis Smooth Scroll Engine: Integrated smooth scrolling lifecycle synchronized across structural studio zones and pricing containers.',
         'High-Impact Hero & Dual CTAs: Features full-screen autoplay background video overlays with direct WhatsApp reservation routes and membership packages.'
       ],
-      image: 'assets/2percentFitness/1.png',
+      image: 'assets/2percentFitness/1.jpg',
       technologies: ['Angular 21', 'Tailwind CSS v4', 'Lenis Scroll', 'PostCSS', 'TypeScript'],
       link: 'https://github.com/yazan2ayoub/two-percent-fitness',
       glowClass: 'teal-glow',
