@@ -7,6 +7,44 @@
   animation: float 3s ease-in-out infinite;
 }
 
+/* Responsive Image Constraints */
+.hero-image-container,
+.floating-image-wrapper {
+  width: 100%;
+  max-width: 450px; /* Constrains desktop size */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-container img,
+.floating-image-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Mobile Screen Adjustments */
+@media (max-width: 768px) {
+  .hero-image-container,
+  .floating-image-wrapper {
+    max-width: 260px; /* Scales down image container for mobile screens */
+    margin-top: 1.5rem;
+  }
+
+  /* Optional: Tone down floating animation amplitude on mobile */
+  .floating-image-wrapper {
+    animation: floatMobile 4s ease-in-out infinite;
+  }
+}
+
+@keyframes floatMobile {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
 /* Bulletproof Button Upward Hover Effect */
 .portfolio-btn {
   transform: translateY(0);
