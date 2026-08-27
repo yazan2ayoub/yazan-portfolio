@@ -1,94 +1,63 @@
-/* =========================================================
-   1. FLOATING PROFILE VECTOR GRAPHIC (Mobile Scaled)
-   ========================================================= */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive Image Constraints */
+.hero-image-container,
+.floating-image-wrapper {
+  width: 100%;
+  max-width: 450px; /* Constrains desktop size */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-container img,
+.floating-image-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Mobile Screen Adjustments */
+@media (max-width: 768px) {
+  .hero-image-container,
+  .floating-image-wrapper {
+    max-width: 260px; /* Scales down image container for mobile screens */
+    margin-top: 1.5rem;
   }
-  50% {
-    transform: translateY(-12px);
+
+  /* Optional: Tone down floating animation amplitude on mobile */
+  .floating-image-wrapper {
+    animation: floatMobile 4s ease-in-out infinite;
   }
 }
 
 @keyframes floatMobile {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
 
-.animate-float {
-  animation: float 3.5s ease-in-out infinite;
-}
-
-.profile-vector-container {
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto;
-}
-
-/* Mobile & Small Screen Fix: Keeps the vector compact */
-@media (max-width: 640px) {
-  .profile-vector-container {
-    max-width: 130px !important;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .animate-float {
-    animation: floatMobile 3.5s ease-in-out infinite;
-  }
-}
-
-
-/* =========================================================
-   2. TOP SUMMARY BOX BUTTONS (Floating & Glowing Hover)
-   ========================================================= */
+/* Bulletproof Button Upward Hover Effect */
 .portfolio-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transform: translateY(0) scale(1);
-  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-  will-change: transform, box-shadow;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease !important;
+  will-change: transform;
 }
 
-/* Floating Lift & Ambient Glow on Hover */
 .portfolio-btn:hover {
-  transform: translateY(-6px) scale(1.04) !important;
-  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-6px) !important; /* Forces layout translation upward */
+  box-shadow: 0 12px 25px rgba(59, 130, 246, 0.4) !important;
 }
 
-/* Color-Specific Glow Shadows */
-.portfolio-btn-blue:hover {
-  box-shadow: 0 12px 28px -4px rgba(37, 99, 235, 0.55),
-              0 6px 12px -2px rgba(37, 99, 235, 0.3) !important;
-}
-
-.portfolio-btn-purple:hover {
-  box-shadow: 0 12px 28px -4px rgba(147, 51, 234, 0.55),
-              0 6px 12px -2px rgba(147, 51, 234, 0.3) !important;
-}
-
-.portfolio-btn-teal:hover {
-  box-shadow: 0 12px 28px -4px rgba(13, 148, 136, 0.55),
-              0 6px 12px -2px rgba(13, 148, 136, 0.3) !important;
-}
-
-.portfolio-btn:active {
-  transform: translateY(-2px) scale(0.98) !important;
-}
-
-
-/* =========================================================
-   3. STACKED CARDS INFRASTRUCTURE & CAROUSEL
-   ========================================================= */
+/* Three Times Larger Card Stack Infrastructure */
 .stack-wrapper {
   position: relative;
   width: 100%;
@@ -97,6 +66,7 @@
   margin: 0 auto;
 }
 
+/* Upscale height only for tablets and desktop viewports */
 @media (min-width: 768px) {
   .stack-wrapper {
     height: 750px;
@@ -113,7 +83,7 @@
   will-change: transform, opacity;
 }
 
-/* Card Glow Background Effect */
+/* Card glow effect */
 .card-glow {
   position: relative;
 }
@@ -132,34 +102,4 @@
 
 .card-glow.active::before {
   opacity: 1;
-}
-
-/* Card Image Frames */
-.media-frame {
-  max-height: 220px;
-  overflow: hidden;
-  border-radius: 1rem;
-}
-
-.stack-card-img {
-  max-height: 220px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* Carousel Indicators */
-.slide-indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 9999px;
-  background-color: rgba(148, 163, 184, 0.4);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.slide-indicator.active-indicator {
-  width: 36px;
-  background-color: #38bdf8;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
 }

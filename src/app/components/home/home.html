@@ -7,9 +7,9 @@
 
   <div class="container relative z-10 w-full mx-auto px-6 max-w-7xl">
     <!-- Hero Row -->
-    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
-      <!-- Text & Summary Box Column -->
+      <!-- Text & Value Prop Column -->
       <div class="flex-1 text-center md:text-left w-full">
         <div class="inline-block px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white text-sm font-semibold mb-6 shadow-lg shadow-blue-500/25">
           🚀 Available for Opportunities
@@ -21,7 +21,6 @@
           <span class="gradient-text font-arabic">يزن ايوب</span>
         </h1>
 
-        <!-- Top Summary Box -->
         <div class="rounded-2xl p-6 pb-8 border border-slate-700/80 mt-4 mb-8 bg-slate-800/40 backdrop-blur-md shadow-2xl">
           <p class="text-xl sm:text-2xl font-semibold gradient-text-blue">
             Civil Engineer, BIM Developer &amp; Full-Stack Developer
@@ -33,24 +32,23 @@
             A civil engineer, full-stack developer, and Teach for Qatar fellow merging four years of industrial infrastructure experience with advanced leadership skills and software architecture to build custom automation and optimized web workflows.
           </p>
 
-          <!-- 3 Floating Action Buttons -->
           <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
-            <a routerLink="/cv" class="portfolio-btn portfolio-btn-blue px-6 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md no-underline">
+            <a routerLink="/cv" class="portfolio-btn px-5 py-2.5 rounded-full text-white font-semibold bg-gradient-to-r from-blue-600 to-blue-700 shadow-md no-underline">
               📄 View My CV
             </a>
-            <a routerLink="/portfolio" class="portfolio-btn portfolio-btn-purple px-6 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-purple-600 to-fuchsia-600 shadow-md no-underline">
+            <a routerLink="/portfolio" class="portfolio-btn px-5 py-2.5 rounded-full text-white font-semibold bg-gradient-to-r from-purple-600 to-purple-700 shadow-md no-underline">
               🛠️ View My Work
             </a>
-            <a href="/assets/yazan-ayoub-cv.pdf" download class="portfolio-btn portfolio-btn-teal px-6 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-teal-500 to-emerald-600 shadow-md no-underline">
+            <a href="/assets/yazan-ayoub-cv.pdf" download class="portfolio-btn px-5 py-2.5 rounded-full text-white font-semibold bg-gradient-to-r from-teal-500 to-teal-700 shadow-md no-underline">
               ⬇️ Download CV
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Profile Vector Column (Mobile Scaled Fix) -->
-      <div class="flex-1 flex justify-center items-center my-2 w-full">
-        <div class="relative profile-vector-container mx-auto">
+      <!-- Profile Vector Column (Fixed Mobile Sizing) -->
+      <div class="flex-1 flex justify-center items-center my-4 w-full">
+        <div class="relative w-44 sm:w-56 md:w-72 max-w-full mx-auto">
           <img 
             src="assets/profile-vector.png" 
             alt="Yazan Ayoub Profile Vector" 
@@ -68,8 +66,8 @@
         
         <!-- Card 1: Civil Infrastructure -->
         <div class="large-stack-card rounded-3xl" [ngStyle]="getCardStyle(0)">
-          <div class="flex flex-col items-center h-full p-4 text-center overflow-hidden bg-slate-800/90 border border-slate-700/80 shadow-2xl rounded-3xl">
-            <div class="w-full flex-shrink-0 flex items-center justify-center media-frame mb-2">
+          <div class="flex flex-col items-center h-full p-4 text-center overflow-hidden">
+            <div class="w-full flex-shrink-0 flex items-center justify-center media-frame">
               <img src="assets/combined-image.png" alt="Yazan Ayoub Project Case Studies" class="stack-card-img" />
             </div>
             <p class="text-sm font-bold uppercase tracking-wide mb-1 flex-shrink-0 gradient-text">
@@ -98,8 +96,8 @@
 
         <!-- Card 2: BIM Automation -->
         <div class="large-stack-card rounded-3xl" [ngStyle]="getCardStyle(1)">
-          <div class="flex flex-col items-center h-full p-4 text-center overflow-hidden bg-slate-800/90 border border-slate-700/80 shadow-2xl rounded-3xl">
-            <div class="w-full flex-shrink-0 flex items-center justify-center media-frame mb-2">
+          <div class="flex flex-col items-center h-full p-4 text-center overflow-hidden">
+            <div class="w-full flex-shrink-0 flex items-center justify-center media-frame">
               <img src="assets/bim-image.png" alt="Yazan Ayoub Revit API C# Toolbar Automation" class="stack-card-img" />
             </div>
             <p class="text-sm font-bold uppercase tracking-wide mb-1 flex-shrink-0 gradient-text-purple">
@@ -128,8 +126,8 @@
 
         <!-- Card 3: Adaptive Leadership -->
         <div class="large-stack-card rounded-3xl" [ngStyle]="getCardStyle(2)">
-          <div class="flex flex-col items-center h-full p-4 text-center overflow-hidden bg-slate-800/90 border border-slate-700/80 shadow-2xl rounded-3xl">
-            <div class="w-full flex-shrink-0 flex items-center justify-center media-frame mb-2">
+          <div class="flex flex-col items-center h-full p-4 text-center overflow-hidden">
+            <div class="w-full flex-shrink-0 flex items-center justify-center media-frame">
               <img src="assets/leadership-image.png" alt="Yazan Ayoub Leadership &amp; Teaching Collage" class="stack-card-img" />
             </div>
             <p class="text-sm font-bold uppercase tracking-wide mb-1 flex-shrink-0 gradient-text-teal">
@@ -158,8 +156,8 @@
 
         <!-- Card 4: Elite Credentials -->
         <div class="large-stack-card rounded-3xl" [ngStyle]="getCardStyle(3)">
-          <div class="flex flex-col items-center h-full p-4 text-center overflow-hidden bg-slate-800/90 border border-slate-700/80 shadow-2xl rounded-3xl">
-            <div class="w-full flex-shrink-0 flex items-center justify-center media-frame mb-2">
+          <div class="flex flex-col items-center h-full p-4 text-center overflow-hidden">
+            <div class="w-full flex-shrink-0 flex items-center justify-center media-frame">
               <img src="assets/certificate-image.png" alt="Yazan Ayoub Engineering &amp; Software Certifications" class="stack-card-img" />
             </div>
             <p class="text-sm font-bold uppercase tracking-wide mb-1 flex-shrink-0 gradient-text-amber">
