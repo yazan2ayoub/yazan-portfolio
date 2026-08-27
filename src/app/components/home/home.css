@@ -7,16 +7,8 @@
   animation: float 3s ease-in-out infinite;
 }
 
-/* Profile Image Circular Mask */
-.profile-img-mask {
-  border-radius: 50%;
-  overflow: hidden;
-  mask-image: radial-gradient(circle at center, black 67%, transparent 69%);
-  -webkit-mask-image: radial-gradient(circle at center, black 67%, transparent 69%);
-  background-color: #0f172a;
-}
-
-/* Minimalist Glowing Action Buttons */
+/* Bulletproof Button Upward Hover Effect */
+/* Minimalist Interactive Glowing Buttons */
 .portfolio-btn {
   display: inline-flex;
   align-items: center;
@@ -66,15 +58,16 @@
   transform: translateY(-3px);
 }
 
-/* Card Stack Infrastructure */
+/* Three Times Larger Card Stack Infrastructure */
 .stack-wrapper {
   position: relative;
   width: 100%;
   max-width: 1300px;
-  height: 900px; /* Mobile safe height */
+  height: 900px; /* Safe height for mobile screens */
   margin: 0 auto;
 }
 
+/* Upscale height only for tablets and desktop viewports */
 @media (min-width: 768px) {
   .stack-wrapper {
     height: 750px;
