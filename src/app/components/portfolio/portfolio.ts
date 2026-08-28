@@ -23,7 +23,6 @@ interface Project {
   styleUrls: ['./portfolio.css']
 })
 export class PortfolioComponent implements AfterViewInit {
-  // Converted filter target to Signal to maximize performance metrics
   activeFilter = signal('All');
 
   projects: Project[] = [
@@ -88,7 +87,7 @@ export class PortfolioComponent implements AfterViewInit {
         'Premium Glassmorphic Design: Fully customized advanced CSS design engine layered with backdrop-blur filters, giving complete thematic continuity with your CV.',
         'Optimized Component Architecture: Built entirely using modern standalone Angular structures, eliminating unnecessary module bloat for hyper-fast initial load speeds.',
         'Aesthetic Lighting Engines: Custom hover-physics matrix mapped to coordinate six distinct drop-shadow neon glows and micro-translations.',
-        'Robust Image Fallback Loop: Bulletproof error-handling interceptors (`onerror`) that smoothly swap broken or missing image paths into clean, structural placeholder graphics.',
+        'Robust Image Fallback Loop: Bulletproof error-handling interceptors (onerror) that smoothly swap broken or missing image paths into clean, structural placeholder graphics.',
         'Entrance Coordination: Native lifecycle synchronization that refreshes Animate On Scroll (AOS) libraries accurately, tracking layout boundaries during sorting changes.'
       ],
       image: 'assets/AngularPortfolio/1.png',
@@ -233,7 +232,6 @@ export class PortfolioComponent implements AfterViewInit {
     }
   ];
 
-  // Computational Computed Signal to process pipeline sorting with maximum efficiency
   filteredProjects = computed(() => {
     const active = this.activeFilter();
     if (active === 'All') {
@@ -254,9 +252,11 @@ export class PortfolioComponent implements AfterViewInit {
     }, 100);
   }
 
-  // Native CSS View Transitions Trigger Execution Engine
   setFilter(category: string) {
+    if (this.activeFilter() === category) return;
+
     const doc = document as any;
+
     if (doc.startViewTransition) {
       doc.startViewTransition(() => {
         this.activeFilter.set(category);
@@ -265,11 +265,13 @@ export class PortfolioComponent implements AfterViewInit {
       this.activeFilter.set(category);
     }
 
-    // Refresh scroll triggers after animations settle down
-    setTimeout(() => { AOS.refresh(); }, 850);
+    setTimeout(() => {
+      if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+      }
+    }, 450);
   }
 
-  // Generates valid, string-sanitized morph tracking tags for elements
   getTransitionName(title: string): string {
     return 'project-' + title.toLowerCase().replace(/[^a-z0-9]/g, '-');
   }

@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   totalSlides = 4;
   private autoSlideInterval: any;
 
+  // Touch Swipe State
+  private touchStartX = 0;
+  private touchEndX = 0;
+
   ngOnInit() {
     this.startAutoSlide();
   }
@@ -23,14 +27,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   startAutoSlide() {
+    this.stopAutoSlide(); // Guard against duplicate intervals
     this.autoSlideInterval = setInterval(() => {
       this.nextSlide();
-    }, 3000);
+    }, 4000);
   }
 
   stopAutoSlide() {
     if (this.autoSlideInterval) {
       clearInterval(this.autoSlideInterval);
+      this.autoSlideInterval = null;
     }
   }
 
@@ -44,8 +50,31 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   goToSlide(index: number) {
     this.currentSlide.set(index);
-    this.stopAutoSlide();
-    this.startAutoSlide();
+    this.stopAutoSlide(); // Pause timer on explicit user interaction
+  }
+
+  // Mobile Touch Event Handlers
+  onTouchStart(e: TouchEvent) {
+    this.stopAutoSlide(); // Immediately freeze rotation when user touches card
+    this.touchStartX = e.changedTouches[0].screenX;
+  }
+
+  onTouchEnd(e: TouchEvent) {
+    this.touchEndX = e.changedTouches[0].screenX;
+    this.handleSwipe();
+  }
+
+  private handleSwipe() {
+    const swipeThreshold = 40;
+    const diff = this.touchStartX - this.touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        this.nextSlide(); // Swiped left -> Next
+      } else {
+        this.prevSlide(); // Swiped right -> Previous
+      }
+    }
   }
 
   getCardStyle(index: number): any {
@@ -55,21 +84,20 @@ export class HomeComponent implements OnInit, OnDestroy {
     let opacity = 0;
     let zIndex = 0;
     
-    // Increased translating layout gaps between the stacked cards
     if (offset === 0) {
       transform = 'translateX(0px) translateY(0px) scale(1)';
       opacity = 1;
       zIndex = 10;
     } else if (offset === 1) {
-      transform = 'translateX(45px) translateY(15px) scale(0.93)';
+      transform = 'translateX(35px) translateY(12px) scale(0.94)';
       opacity = 0.65;
       zIndex = 5;
     } else if (offset === 2) {
-      transform = 'translateX(90px) translateY(30px) scale(0.86)';
+      transform = 'translateX(70px) translateY(24px) scale(0.88)';
       opacity = 0.35;
       zIndex = 3;
     } else {
-      transform = 'translateX(135px) translateY(45px) scale(0.79)';
+      transform = 'translateX(105px) translateY(36px) scale(0.82)';
       opacity = 0;
       zIndex = 1;
     }
