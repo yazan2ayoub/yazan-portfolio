@@ -1,6 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app';
+import { inject } from '@vercel/analytics';
+
+// Initialize Vercel Analytics
+inject();
 
 // Initialize AOS
 import AOS from 'aos';
